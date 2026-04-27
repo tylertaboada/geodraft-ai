@@ -9,9 +9,9 @@ import CtaFooter from './components/CtaFooter';
 
 export default function App() {
   return (
-    <div className="min-h-screen">
+    <div style={{ background: '#f7f6f3', minHeight: '100vh' }}>
       <Navbar />
-      <main>
+      <main className="pt-14">
         <Hero />
         <ProblemSection />
         <WorkflowSection />
