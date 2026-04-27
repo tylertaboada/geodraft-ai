@@ -22,7 +22,7 @@ export interface ReportSection {
 }
 
 export interface RiskFlag {
-  level: 'high' | 'medium' | 'low' | 'info';
+  level: 'high' | 'elevated' | 'medium' | 'low' | 'info';
   label: string;
   description: string;
 }
