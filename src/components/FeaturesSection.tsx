@@ -1,30 +1,39 @@
 const features = [
-  { title: 'Report standardization', body: 'Enforce consistent structure, section order, and disclaimer language firm-wide.' },
-  { title: 'Senior review workflows', body: 'Assign, comment, and approve AI-drafted sections before they leave the team.' },
-  { title: 'Firm-specific templates', body: 'Customize language, risk framing, and section depth to match your standards.' },
-  { title: 'Regional soil libraries', body: 'Pre-loaded context for PA, NY, NJ — glacial sequences, bedrock, frost depth.' },
-  { title: 'Audit trail', body: 'Every draft and revision logged with timestamps and user attribution.' },
-  { title: 'Secure data handling', body: 'SSO, role-based access, enterprise data residency. Client data stays protected.' },
+  {
+    title: 'Structured risk flags',
+    body: 'Weak soils, fill, shallow groundwater, floodplain proximity — flagged by severity so the reviewing engineer knows where to look first.',
+  },
+  {
+    title: 'Audience-aware output',
+    body: 'The same data generates a technical draft for the internal engineer and a plain-language summary for the developer — without you writing it twice.',
+  },
+  {
+    title: 'Northeast geology built in',
+    body: 'Glacial till, outwash, varved clays, diabase, carbonate rock, frost depth — the regional context is already part of the interpretation.',
+  },
+  {
+    title: 'Consistent format, every time',
+    body: 'New hire or 20-year veteran — the draft structure is the same. Reviewers know exactly where to find the risk summary, the groundwater section, the foundation discussion.',
+  },
+  {
+    title: 'Plain-text output',
+    body: 'No proprietary format, no locked-in templates. The output copies cleanly into whatever report format your firm already uses.',
+  },
+  {
+    title: 'Built around PE review',
+    body: 'The draft is designed to make engineer review faster, not to skip it. Every section is structured to support judgment, not replace it.',
+  },
 ];
 
 export default function FeaturesSection() {
   return (
-    <section id="features" style={{ borderTop: '1px solid #e8e6e1', background: '#ffffff' }} className="py-20 px-6">
+    <section id="features" style={{ borderTop: '1px solid #e8e6e1' }} className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div>
-            <p className="label mb-3">Enterprise features</p>
-            <h2 className="font-serif text-2xl md:text-3xl text-charcoal max-w-md leading-snug">
-              Built for the whole department, not just one engineer.
-            </h2>
-          </div>
-          <a href="#tool" className="btn-primary w-fit">Request pilot</a>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px" style={{ background: '#e8e6e1' }}>
+        <p className="label mb-10">What it does</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
           {features.map((f, i) => (
-            <div key={i} style={{ background: '#ffffff' }} className="p-6">
-              <p className="font-serif text-sm text-charcoal mb-2">{f.title}</p>
+            <div key={i}>
+              <p className="font-serif text-base text-charcoal mb-2">{f.title}</p>
               <p className="font-sans text-sm text-muted leading-relaxed">{f.body}</p>
             </div>
           ))}
